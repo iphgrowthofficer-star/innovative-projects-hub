@@ -47,17 +47,18 @@ Single-page marketing website for a social media management agency targeting sma
 
 ## Page Sections (in order)
 
-1. **Navigation** — fixed top, glassmorphism backdrop blur, logo + links + CTA, mobile hamburger menu
-2. **Hero** — full viewport, gradient blobs (parallax on desktop), headline + subtitle + 2 CTAs, floating stat cards (engagement +147%, followers +2.4K, response rate 3x)
+1. **Navigation** — fixed top, glassmorphism backdrop blur, logo + links (Services, Packages, Process, About, Results) + CTA, mobile hamburger menu
+2. **Hero** — full viewport, headline + subtitle + 2 CTAs ("Book a Free Consultation" + "Meet Gina, Your Growth Partner"), floating stat cards (engagement +147%, followers +2.4K, response rate 3x)
 3. **Marquee Ticker** — infinite scrolling service keywords
 4. **What We Do** (#services) — 4 service cards (Content Planning, Content Creation, Scheduling, Growth Strategy) with numbered icons
-5. **Who This Is For** (#who) — checklist layout (Small Business Owners, Service Providers, Busy Entrepreneurs, Overwhelmed by Social Media) + image placeholder
-6. **Pricing** (#pricing) — 3-tier cards (Foundation $497-697, Growth $997-1497 featured, Visibility+Growth $1997-2997)
-7. **How It Works** (#how-it-works) — 4 numbered steps with arrow connectors (Consultation, Strategy, Content Creation, Scheduling + Growth)
-8. **Why Choose Us** (#why) — 4 value props with icons (Done-for-You, Strategy + Execution, Built for Small Businesses, Focused on Real Growth)
-9. **Results** (#results) — 4 outcome cards (Stronger Online Presence, More Engagement, Consistent Branding, More Customer Inquiries)
-10. **Final CTA** (#book) — centered call-to-action with booking button
-11. **Footer** — logo, nav links, copyright 2026
+5. **Meet Your Strategist** (#about) — two-column grid: left has "Founder & Business Growth Strategist" gradient badge + owner photo (`owner-photo.png`), right has bio + 4 strength cards (20+ Years of Business Growth, More Than Just Social Media, Built for New and Growing Businesses, A Real Partner Not Just a Service) + CTA button
+6. **Who This Is For** (#who) — checklist layout (New and Existing Business Owners, Side Hustlers Going Full-Time, Busy Entrepreneurs, Overwhelmed by Social Media) + SVG hub-and-spoke illustration
+7. **Pricing** (#pricing) — 3-tier cards (Foundation $497-697, Growth $997-1497 featured, Visibility+Growth $1997-2997)
+8. **How It Works** (#how-it-works) — 4 numbered steps with arrow connectors (Consultation, Strategy, Content Creation, Scheduling + Growth)
+9. **Why Choose Us** (#why) — 4 value props with icons (Done-for-You, Strategy + Execution, Built for Small Businesses, Focused on Real Growth)
+10. **Results** (#results) — 4 outcome cards (Stronger Online Presence, More Engagement, Consistent Branding, More Customer Inquiries)
+11. **Final CTA** (#book) — centered call-to-action with booking button
+12. **Footer** — logo, nav links, copyright 2026
 
 ## Animations & Interactions
 
@@ -79,12 +80,9 @@ Single-page marketing website for a social media management agency targeting sma
 
 ## Placeholders / TODOs
 
-- Hero image: SVG placeholder ("Lifestyle photo placeholder")
-- Who This Is For image: SVG placeholder ("Business owner photo placeholder")
-- "Book a Call" CTA links: all point to `#book` (no external booking URL yet)
 - No favicon or Open Graph meta tags
 - No analytics or tracking scripts
-- Images throughout are placeholder SVG icons, no real photography
+- `office-photo.jpg` exists but is not currently used (replaced by SVG illustration)
 
 ## Conventions
 
