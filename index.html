@@ -2058,6 +2058,166 @@
     @media (max-width: 480px) {
       .industries-grid { grid-template-columns: 1fr; }
     }
+    /* ─── AGENT INTRO SECTION ─── */
+    .agent-intro {
+      padding: var(--section-pad) 0;
+      background: var(--dark);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .agent-intro::before {
+      content: '';
+      position: absolute;
+      top: -120px;
+      right: -120px;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(196,149,106,0.06) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .agent-intro .section-label { color: var(--accent-light); }
+    .agent-intro .section-label::before { background: var(--accent); }
+
+    .agent-intro h2 { color: var(--off-white); }
+
+    .agent-intro .section-subtitle {
+      color: rgba(250,249,247,0.55);
+      max-width: 540px;
+      margin: 0 auto;
+    }
+
+    .agent-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      margin-top: 60px;
+    }
+
+    .agent-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 20px;
+      padding: 28px 22px 24px;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    .agent-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.4s ease;
+    }
+
+    .agent-card:nth-child(1)::before { background: linear-gradient(90deg, var(--accent), var(--accent-light)); }
+    .agent-card:nth-child(2)::before { background: linear-gradient(90deg, var(--plum), #B09AB3); }
+    .agent-card:nth-child(3)::before { background: linear-gradient(90deg, var(--sage), #A3C1A7); }
+    .agent-card:nth-child(4)::before { background: linear-gradient(90deg, #8B7355, var(--accent)); }
+
+    .agent-card:hover::before { transform: scaleX(1); }
+
+    .agent-card:hover {
+      background: rgba(255,255,255,0.07);
+      border-color: rgba(255,255,255,0.14);
+      transform: translateY(-6px);
+    }
+
+    .agent-avatar {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-serif);
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 16px;
+      position: relative;
+    }
+
+    .agent-card:nth-child(1) .agent-avatar { background: linear-gradient(135deg, var(--accent), var(--accent-dark)); }
+    .agent-card:nth-child(2) .agent-avatar { background: linear-gradient(135deg, var(--plum), #6B4F6E); }
+    .agent-card:nth-child(3) .agent-avatar { background: linear-gradient(135deg, var(--sage), #5A7A5E); }
+    .agent-card:nth-child(4) .agent-avatar { background: linear-gradient(135deg, #8B7355, var(--accent-dark)); }
+
+    .agent-status {
+      position: absolute;
+      bottom: 2px;
+      right: 2px;
+      width: 12px;
+      height: 12px;
+      background: #4CAF73;
+      border-radius: 50%;
+      border: 2px solid var(--dark);
+      animation: status-pulse 2.5s ease-in-out infinite;
+    }
+
+    @keyframes status-pulse {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(76, 175, 115, 0.4); }
+      50% { box-shadow: 0 0 0 5px rgba(76, 175, 115, 0); }
+    }
+
+    .agent-name {
+      font-family: var(--font-serif);
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--off-white);
+      margin-bottom: 3px;
+    }
+
+    .agent-role {
+      font-size: 0.72rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--accent);
+      margin-bottom: 12px;
+    }
+
+    .agent-card:nth-child(2) .agent-role { color: #B09AB3; }
+    .agent-card:nth-child(3) .agent-role { color: var(--sage); }
+    .agent-card:nth-child(4) .agent-role { color: var(--accent-light); }
+
+    .agent-trait {
+      display: inline-block;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 20px;
+      padding: 3px 10px;
+      font-size: 0.7rem;
+      color: rgba(250,249,247,0.5);
+      letter-spacing: 0.04em;
+      margin-bottom: 14px;
+    }
+
+    .agent-divider {
+      height: 1px;
+      background: rgba(255,255,255,0.07);
+      margin-bottom: 14px;
+    }
+
+    .agent-job {
+      font-size: 0.83rem;
+      color: rgba(250,249,247,0.55);
+      line-height: 1.6;
+    }
+
+    @media (max-width: 1024px) {
+      .agent-cards-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 768px) {
+      .agent-cards-grid { grid-template-columns: 1fr; gap: 14px; }
+    }
+
   </style>
 </head>
 <body>
@@ -2108,7 +2268,7 @@
       <div class="hero-content">
         <span class="section-label">AI Automation & Agents</span>
         <h1>AI Automation & Implementation <span class="gradient-text italic">for Small Businesses</span></h1>
-        <p class="hero-subtitle">You're doing 40 hours of work that AI should handle. Customer follow-ups, marketing, outreach, daily operations — we build custom AI agent teams that take it all off your plate.</p>
+        <p class="hero-subtitle">40 hours of your week is going to tasks AI could handle. Customer follow-ups, marketing, outreach, daily operations — we build custom AI agent teams that take it all off your plate.</p>
         <div class="hero-buttons">
           <a href="https://calendar.app.google/ptUn1uAM312FhpsL9" target="_blank" class="btn btn-primary btn-glow">
             <span>Build Your AI Team</span>
@@ -2285,7 +2445,7 @@
     <div class="container">
       <div class="section-header fade-up">
         <span class="section-label">What We Do</span>
-        <h2>Everything that eats<br><span class="gradient-text italic">your week.</span></h2>
+        <h2>Less on your plate.<br><span class="gradient-text italic">More in your business.</span></h2>
         <p class="section-subtitle">We build AI agent teams that handle your repetitive work — and craft the marketing strategy, social media, and web presence that keeps you competitive.</p>
       </div>
       <div class="services-grid stagger">
@@ -2321,6 +2481,57 @@
           <h3>Marketing Strategy & Online Presence</h3>
           <p>AI-powered social media content, website strategy, and marketing plans tailored to your industry — so you look professional and stay consistent without doing it yourself.</p>
         </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ─── AGENT INTRO ─── -->
+  <section class="agent-intro">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-label">Inside Your AI Team</span>
+        <h2>Every agent has a name,<br><span class="gradient-text italic">a role, and one job to do.</span></h2>
+        <p class="section-subtitle">Think of them like dedicated team members — each one built for a specific task, running on your behalf every single day.</p>
+      </div>
+      <div class="agent-cards-grid stagger">
+
+        <div class="agent-card fade-up">
+          <div class="agent-avatar">F<span class="agent-status"></span></div>
+          <div class="agent-name">Ferris</div>
+          <div class="agent-role">Lead Follow-Up Agent</div>
+          <span class="agent-trait">Friendly &amp; Persistent</span>
+          <div class="agent-divider"></div>
+          <p class="agent-job">Reaches out to new leads automatically. No one slips through the cracks — Ferris handles the follow-ups so you stay focused on the work.</p>
+        </div>
+
+        <div class="agent-card fade-up">
+          <div class="agent-avatar">S<span class="agent-status"></span></div>
+          <div class="agent-name">Sloane</div>
+          <div class="agent-role">Scheduling Agent</div>
+          <span class="agent-trait">Precise &amp; Reliable</span>
+          <div class="agent-divider"></div>
+          <p class="agent-job">Books appointments, sends reminders, and keeps your calendar updated — without back-and-forth emails or missed bookings.</p>
+        </div>
+
+        <div class="agent-card fade-up">
+          <div class="agent-avatar">C<span class="agent-status"></span></div>
+          <div class="agent-name">Cameron</div>
+          <div class="agent-role">Content Agent</div>
+          <span class="agent-trait">Creative &amp; Consistent</span>
+          <div class="agent-divider"></div>
+          <p class="agent-job">Writes and posts your social media content every week, on brand and on schedule — so your business stays visible without you doing a thing.</p>
+        </div>
+
+        <div class="agent-card fade-up">
+          <div class="agent-avatar">R<span class="agent-status"></span></div>
+          <div class="agent-name">Rooney</div>
+          <div class="agent-role">Reporting Agent</div>
+          <span class="agent-trait">Sharp &amp; Thorough</span>
+          <div class="agent-divider"></div>
+          <p class="agent-job">Pulls a weekly summary of how your business is performing so you always know what's happening — without digging through data yourself.</p>
+        </div>
+
       </div>
     </div>
   </section>
@@ -2519,7 +2730,7 @@
       <div class="section-header fade-up">
         <span class="section-label">Packages</span>
         <h2>Your Custom AI <span class="gradient-text italic">Agent Team</span></h2>
-        <p class="section-subtitle">We discuss your business needs and build a tailored AI team that saves you 2-40 hours per month.</p>
+        <p class="section-subtitle">We discuss your business needs and build a tailored AI team built to save you 40 hours of work every month.</p>
       </div>
       <div class="pricing-grid stagger">
 
