@@ -4,10 +4,12 @@ Last updated: 2026-11-18
 
 ## Current Status
 
-- Live site: https://iphgrowthofficer-star.github.io/innovative-projects-hub/
-- Published baseline: `fac39ab` (`Move founder story onto homepage and align header`).
-- Current redesign branch: `ai-platform-repositioning`.
-- The redesign is local and intentionally unpublished. The brief says not to publish to production without owner approval.
+- Current live site: https://iphgrowthofficer-star.github.io/innovative-projects-hub/.
+- Published baseline: `503816c` (`Redesign IPH for small business AI services`).
+- Custom domain selected and registered through Namecheap: `innovativeprojectshub.com`.
+- Custom-domain configuration is prepared on branch `custom-domain-setup`; it is not deployed yet.
+- Namecheap account owns the domain, but it currently uses PremiumDNS (`pdns1.registrar-servers.com`, `pdns2.registrar-servers.com`). Direct Advanced DNS returned a Namecheap server error. A bulk Host Records submission returned to the domain list, but direct queries to both authoritative servers still show no apex A or `www` CNAME records.
+- Do not merge/publish the custom-domain branch until the DNS records are visible on the active authoritative nameservers and the domain resolves.
 - The site is static HTML/CSS/JavaScript with no build system or package dependencies.
 
 ## Project Files
@@ -71,6 +73,12 @@ The About navigation link on Home anchors to Gina's founder section; the dedicat
 
 ## Owner Inputs / Follow-Ups
 
+- Configure the GitHub Pages records in the active PremiumDNS zone, or intentionally switch to Namecheap BasicDNS only after checking whether PremiumDNS or other DNS/email services must be retained. Do not change nameservers blindly.
+- Required apex records: four A records for host `@` pointing to `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, and `185.199.111.153`.
+- Required `www` record: CNAME host `www`, target `iphgrowthofficer-star.github.io`.
+- Preserve existing email-related DNS records and do not alter DNSSEC unless specifically troubleshooting it.
+- After DNS resolves to GitHub Pages, publish branch `custom-domain-setup` to `main`, confirm the custom domain in GitHub repository Settings > Pages, enable Enforce HTTPS when GitHub offers it, and verify both apex and `www` behavior.
+- DNS currently points to Namecheap parking (`@` A record `162.255.119.8`; `www` CNAME `parkingpage.namecheap.com.`), so the custom domain is not live yet.
 - Confirm the Google Calendar event type and availability.
 - Confirm Google Form responses remain enabled and arrive as expected.
 - Have a qualified professional review the privacy and terms drafts before treating them as final policies.
@@ -98,4 +106,4 @@ cd "/Users/growthofficer/Learning/IPH Start up/innovative-projects-hub"
 git status --short --branch
 ```
 
-Validate internal paths, mobile navigation, meta tags, and `git diff --check`. Update `IPH Website/CLAUDE.md` and this handoff if structure or status changes. After explicit owner approval only, commit the feature branch, merge to `main`, push, and verify GitHub Pages Actions succeeds. Do not publish without that approval.
+Validate internal paths, mobile navigation, meta tags, and `git diff --check`. Update `IPH Website/CLAUDE.md` and this handoff if structure or status changes. Custom-domain setup is pending the owner changing Namecheap DNS; after DNS points to GitHub Pages, merge `custom-domain-setup` to `main`, set/verify the domain in GitHub Pages settings, and wait for HTTPS provisioning.

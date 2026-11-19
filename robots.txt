@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://iphgrowthofficer-star.github.io/innovative-projects-hub/sitemap.xml
+Sitemap: https://innovativeprojectshub.com/sitemap.xml

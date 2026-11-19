@@ -2,7 +2,8 @@
 
 Static website for Innovative Projects Hub, offering platform-independent AI training, consulting, and implementation for small business owners, entrepreneurs, professionals, and individuals. Claude remains a featured training option, alongside ChatGPT and other tools when appropriate.
 
-**Live URL:** https://iphgrowthofficer-star.github.io/innovative-projects-hub/
+**Current live URL:** https://iphgrowthofficer-star.github.io/innovative-projects-hub/
+**Custom domain:** innovativeprojectshub.com (registered; DNS and GitHub Pages activation are pending)
 **Repository:** https://github.com/iphgrowthofficer-star/innovative-projects-hub
 **Hosting:** GitHub Pages (free), deployed from `main` branch
 
@@ -137,7 +138,7 @@ The About nav points to the founder section on Home; `/about/` is also available
 
 To preview locally, run `python3 -m http.server 8000` from the repository folder and visit `http://localhost:8000`. Static directory pages resolve at paths such as `/services/` and `/ai-training-chicago/`.
 
-GitHub Pages serves the root `index.html` and directory pages from `main`. Current implementation work should remain on its feature branch until the owner approves publishing.
+GitHub Pages serves the root `index.html` and directory pages from `main`. The custom domain setup is on branch `custom-domain-setup`. Configure Namecheap apex A records to `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, and `185.199.111.153`; set `www` CNAME to `iphgrowthofficer-star.github.io`; remove conflicting parking records. After DNS resolves, merge the setup branch, confirm the domain under GitHub repository Settings > Pages, and enable HTTPS when available.
 
 ## Copy Conventions
 
