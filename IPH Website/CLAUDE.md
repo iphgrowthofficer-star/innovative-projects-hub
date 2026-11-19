@@ -1,6 +1,6 @@
 # Innovative Projects Hub — Website
 
-Static website for Innovative Projects Hub, offering friendly Claude training for small business owners and busy moms, plus guided custom Claude agent builds. The audience includes people who want practical help with AI and do not have a technical background.
+Static website for Innovative Projects Hub, offering platform-independent AI training, consulting, and implementation for small business owners, entrepreneurs, professionals, and individuals. Claude remains a featured training option, alongside ChatGPT and other tools when appropriate.
 
 **Live URL:** https://iphgrowthofficer-star.github.io/innovative-projects-hub/
 **Repository:** https://github.com/iphgrowthofficer-star/innovative-projects-hub
@@ -8,18 +8,23 @@ Static website for Innovative Projects Hub, offering friendly Claude training fo
 
 ## Tech Stack
 
-- **Single file:** `index.html` (all HTML, CSS, and JS embedded)
-- **No build tools, frameworks, or dependencies**
-- **Fonts:** Google Fonts — Playfair Display (serif headings) + Inter (sans-serif body) + Cormorant Garamond (logo text)
+- Static HTML pages using directory `index.html` files for clean GitHub Pages URLs.
+- Root `index.html` is the homepage; `assets/site.css` and `assets/site.js` are shared by the dedicated pages.
+- No build tools, frameworks, or package dependencies.
+- Fonts: Google Fonts — Playfair Display, Inter, and Cormorant Garamond.
 
 ## Project Structure
 
 | File/Folder | Purpose |
 |-------------|---------|
-| `index.html` | The entire site (HTML + embedded CSS + JS) |
-| `owner-photo.png` | Gina's founder photo, displayed on the About view |
+| `index.html` | Homepage, with existing brand styles and home content |
+| `assets/site.css` | Shared layout and responsive styles for dedicated pages |
+| `assets/site.js` | Shared mobile-menu behavior for dedicated pages |
+| `owner-photo.png` | Gina's founder photo, displayed on Home and About |
 | `office-photo.jpg` | Office workspace photo (saved for future use, not currently displayed) |
 | `assets/logo-drafts/` | Logo design exploration files (2 rounds of drafts) |
+| `resources/small-business-ai-opportunity-checklist.txt` | Downloadable business AI opportunity checklist |
+| `sitemap.xml`, `robots.txt` | Search crawler discovery files |
 | `IPH Website/CLAUDE.md` | This file — current project documentation |
 
 ## Design System
@@ -50,9 +55,8 @@ Static website for Innovative Projects Hub, offering friendly Claude training fo
 
 ### Spacing
 
-- `--max-width: 1200px` — container max width
-- `--section-pad: clamp(100px, 12vw, 160px)` — vertical section padding
-- Container horizontal padding: 24px
+- Shared pages use a 1160px maximum content width and responsive section spacing.
+- The homepage retains legacy embedded styles for the existing brand and hero effects.
 
 ### Buttons
 
@@ -69,50 +73,54 @@ Static website for Innovative Projects Hub, offering friendly Claude training fo
 - **Used in:** Navigation bar and footer
 - **Favicon:** Inline SVG version of the iph monogram (no external file needed)
 
-## Page Views
+## Page Structure
 
-The single HTML file uses hash routes for the main views. Each page view has its own document title and description; About links point to the founder section on Home:
+Each directory contains a real `index.html`, with page-specific title, description, canonical URL, one H1, internal links, and CTAs:
 
-1. **Home** (`#home`) — headline, offer links, three-step process, Gina's photo and founder story, placeholder testimonials, booking CTA
-2. **Services** (`#services`) — free fit call, Starter Session, 3-Pack, and Agent Build Consultation
-3. **Courses** (`#courses`) — Claude for Small Business and Claude for Moms, plus a name/email waitlist form
-4. **About** (`#about`) — anchor to Gina's founder section on Home, including her photo and nearly 20 years in sales leadership, retail, small business, and team development
-5. **FAQ** (`#faq`) — six questions about Claude, privacy, plans, sessions, and service differences
-6. **Book** (`#book`) — free call details, intake questions, and booking CTA
+- `/` Home with AI benefit cards, audiences, service previews, founder story, how-it-works, checklist download, FAQs, and booking CTA.
+- `/services/`, `/claude-training/`, `/ai-automation/`, `/ai-consulting/`, `/custom-ai-agents/` service overview and detailed offers.
+- `/training/` general AI training and coaching; `/courses/` Claude course outlines and the live waitlist form.
+- `/who-we-help/`, `/about/`, `/ai-training-chicago/`, `/faq/`, `/contact/` audience, founder, local, FAQ, and contact pages.
+- `/resources/` checklist download; `/blog/` article outlines and reusable editorial guidance, not published articles.
+- `/privacy-policy/` and `/terms-of-service/` plain-language drafts marked for owner/legal review.
+- `/404.html` not-found fallback.
 
-`PAGE_META` in `index.html` holds route titles and descriptions. `SITE_CONFIG` holds the booking and waitlist URLs and all displayed prices.
+The About nav points to the founder section on Home; `/about/` is also available as a dedicated founder page.
 
-## SEO (added April 2026)
+## SEO
 
-- **Title:** "Claude Training for Small Business Chicago | Innovative Projects Hub"
-- **Meta description:** Friendly Claude training and AI help for small business owners in Chicago.
-- **Open Graph tags:** og:title, og:description, og:image (owner-photo.png), og:url
-- **Twitter Card tags:** summary_large_image
-- **Canonical URL:** set to GitHub Pages URL
+- Each page has a unique SEO title, meta description, and canonical URL.
+- Homepage Open Graph and Twitter metadata are configured.
+- Primary search themes include AI training for small business, AI consulting in Chicago, small-business AI automation, AI productivity coaching, Claude training, and custom AI agents. Use these naturally, based on the actual page content.
+- `sitemap.xml` lists current pages; `robots.txt` allows crawling and points to the sitemap.
+- Homepage JSON-LD covers Organization, Person, and WebSite; service and FAQ pages add appropriate schema where content supports it.
+- No ratings, reviews, physical office address, or unverified achievements are marked up.
 - **Favicon:** inline SVG (no file needed)
-- **H1:** "Get hours back every week with Claude"
+- **H1:** "Work Smarter. Save Time. Grow Your Business with AI."
 
 ## Integrations
 
 ### Booking and Waitlist
-- `SITE_CONFIG.BOOKING_URL` currently uses the Google Calendar appointment link from the previous IPH site; confirm the appointment schedule and availability before publishing.
-- The Courses view embeds the Google Form configured by `SITE_CONFIG.WAITLIST_FORM_URL`; responses are collected in Google Forms.
-- Update the `SITE_CONFIG.PRICES` values in one place when prices change.
+- Google Calendar booking link: `https://calendar.app.google/ptUn1uAM312FhpsL9`.
+- The Courses page embeds the live Google Form; its short link is `https://forms.gle/FWXBfhTTXi2qDUtn6`.
+- The form collects course interest, name, and email. No separate nonfunctional signup form is used.
+- Current existing prices: Starter Session $150, 3-Pack $399, Agent Build Consultation $200/hour with a two-hour minimum, courses $47–$97 launching range. Get owner approval before changing prices or describing unpriced offers.
 
 ## Interactions
 
-- Hash navigation switches between the Home, Services, Courses, FAQ, and Book views and updates the document title and description. About links scroll to the founder section on Home.
-- The mobile hamburger button opens and closes the responsive navigation.
+- Dedicated page URLs replace the old hidden hash-route SPA pages.
+- Shared mobile navigation is controlled by `assets/site.js`.
+- The legacy inline homepage styles remain in `index.html`; new dedicated pages use `assets/site.css`.
 
 ## Responsive Breakpoints
 
-- **1024px:** content grids reduce to two columns
-- **768px:** navigation switches to the mobile menu and content grids become single-column
-- **480px:** buttons expand to the available width
+- Shared pages: 900px tablet layout, 720px mobile navigation and single-column cards, 420px narrow-phone adjustments.
+- Homepage includes its retained responsive styles plus short-viewport header/hero adjustments.
 
 ## Content Notes
 
-- IPH teaches people to use Claude and helps business owners build Claude agents; it does not offer web design or digital marketing services.
+- IPH offers platform-independent AI training, consulting, and implementation. Do not frame the business as Claude-only.
+- Distinguish AI training, agent planning, software building, integrations, and deployment. Do not imply deployment is included unless scoped and approved.
 - Do not add past-client names or unsupported testimonials/results.
 - Keep copy friendly and clear for non-technical readers.
 
@@ -120,14 +128,16 @@ The single HTML file uses hash routes for the main views. Each page view has its
 
 - Confirm the Google Calendar appointment schedule and availability.
 - Confirm the embedded Google Form accepts responses and records them as expected.
-- Sessions are available online or in person.
-- Replace testimonial placeholders when real testimonials are available.
+- Get owner/legal review of Privacy and Terms drafts.
+- Add GA4, Search Console, and Bing Webmaster verification only after the owner supplies IDs/access. No IDs are fabricated or embedded.
+- No testimonials are published; only add genuine authorized testimonials.
+- Local SEO owner tasks: verify/complete Google Business Profile and Bing Places if eligible, keep business details consistent, consider relevant local directories and LinkedIn presence, and request reviews only from real customers without incentives or fabricated claims.
 
 ## Deployment
 
-To preview locally, open `index.html` in a browser or run `python3 -m http.server 8000` from the repository folder and visit `http://localhost:8000`.
+To preview locally, run `python3 -m http.server 8000` from the repository folder and visit `http://localhost:8000`. Static directory pages resolve at paths such as `/services/` and `/ai-training-chicago/`.
 
-To publish, merge the update branch into `main` and push it; GitHub Pages serves the root `index.html` from `main`.
+GitHub Pages serves the root `index.html` and directory pages from `main`. Current implementation work should remain on its feature branch until the owner approves publishing.
 
 ## Copy Conventions
 
@@ -137,10 +147,7 @@ To publish, merge the update branch into `main` and push it; GitHub Pages serves
 
 ## Code Conventions
 
-- All CSS in a single `<style>` tag in `<head>`
-- All JS in a single `<script>` tag before `</body>`
-- Sections use semantic HTML (`<section>`, `<nav>`, `<footer>`)
-- Icons are inline SVGs (no icon library)
-- CSS uses custom properties extensively for theming
-- Mobile menu uses `.open` class toggle
-- External links should open safely in a new tab when appropriate.
+- Dedicated pages use semantic HTML and shared styles/scripts from `assets/`.
+- Maintain existing brand colors and typography; keep layouts mobile-responsive.
+- Do not add unnecessary dependencies or expose secrets in frontend code.
+- External links that open in new tabs use `rel="noopener"`.

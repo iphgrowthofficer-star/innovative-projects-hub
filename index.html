@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Claude Training for Small Business Chicago | Innovative Projects Hub</title>
-  <meta name="description" content="Friendly Claude training and AI help for small business owners in Chicago. Learn everyday tasks in a one-on-one session, explore courses, or book a free 15-minute call.">
+  <title>AI Training &amp; Consulting for Small Businesses in Chicago | IPH</title>
+  <meta name="description" content="Practical AI training, Claude coaching, and custom AI automation for small businesses in Chicago and online. Learn to save time and streamline operations.">
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='48' fill='none' stroke='%23C4956A' stroke-width='3'/><text x='50' y='67' text-anchor='middle' font-family='Georgia,serif' font-size='42' font-style='italic' fill='%23C4956A'>iph</text></svg>">
@@ -12,20 +12,30 @@
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://iphgrowthofficer-star.github.io/innovative-projects-hub/">
-  <meta property="og:title" content="Claude Training for Small Business Chicago | Innovative Projects Hub">
-  <meta property="og:description" content="Friendly Claude training and AI help for small business owners in Chicago. Learn everyday tasks in a one-on-one session, explore courses, or book a free 15-minute call.">
+  <meta property="og:title" content="AI Training &amp; Consulting for Small Businesses in Chicago | IPH">
+  <meta property="og:description" content="Practical AI training, Claude coaching, and custom AI automation for small businesses in Chicago and online.">
   <meta property="og:image" content="https://iphgrowthofficer-star.github.io/innovative-projects-hub/owner-photo.png">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Claude Training for Small Business Chicago | Innovative Projects Hub">
-  <meta name="twitter:description" content="Friendly Claude training and AI help for small business owners in Chicago. Learn everyday tasks in a one-on-one session, explore courses, or book a free 15-minute call.">
+  <meta name="twitter:title" content="AI Training &amp; Consulting for Small Businesses in Chicago | IPH">
+  <meta name="twitter:description" content="Practical AI training, Claude coaching, and custom AI automation for small businesses in Chicago and online.">
   <meta name="twitter:image" content="https://iphgrowthofficer-star.github.io/innovative-projects-hub/owner-photo.png">
 
   <!-- Canonical -->
   <link rel="canonical" href="https://iphgrowthofficer-star.github.io/innovative-projects-hub/">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {"@type":"Organization","@id":"https://iphgrowthofficer-star.github.io/innovative-projects-hub/#organization","name":"Innovative Projects Hub","url":"https://iphgrowthofficer-star.github.io/innovative-projects-hub/","email":"iph.growthofficer@gmail.com","description":"Practical AI training, consulting, and implementation for small business owners and professionals."},
+      {"@type":"Person","@id":"https://iphgrowthofficer-star.github.io/innovative-projects-hub/#gina","name":"Gina","jobTitle":"Founder","image":"https://iphgrowthofficer-star.github.io/innovative-projects-hub/owner-photo.png","worksFor":{"@id":"https://iphgrowthofficer-star.github.io/innovative-projects-hub/#organization"}},
+      {"@type":"WebSite","@id":"https://iphgrowthofficer-star.github.io/innovative-projects-hub/#website","name":"Innovative Projects Hub","url":"https://iphgrowthofficer-star.github.io/innovative-projects-hub/","publisher":{"@id":"https://iphgrowthofficer-star.github.io/innovative-projects-hub/#organization"}}
+    ]
+  }
+  </script>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
   <style>
     /* ─── RESET & BASE ─── */
@@ -213,8 +223,8 @@
     }
 
     /* ─── NAVIGATION ─── */
-    nav {
-      position: fixed;
+    #navbar {
+      position: sticky;
       top: 0;
       left: 0;
       right: 0;
@@ -226,7 +236,7 @@
       transition: all 0.4s ease;
     }
 
-    nav.scrolled {
+    #navbar.scrolled {
       box-shadow: 0 4px 30px rgba(0,0,0,0.06);
     }
 
@@ -235,6 +245,7 @@
       align-items: center;
       justify-content: space-between;
       height: 76px;
+      padding-top: 8px;
       transform: translateY(6px);
     }
 
@@ -2146,8 +2157,12 @@
     }
 
     .page-view[hidden] { display: none !important; }
-    .page-view { min-height: calc(100vh - 76px); padding-top: 76px; }
+    .page-view { min-height: calc(100vh - 77px); padding-top: 0; }
     .page-view > section { padding: clamp(72px, 9vw, 120px) 0; }
+    .page-view > .hero { padding-top: clamp(32px, 5vw, 56px); }
+    .page-view > .hero { min-height: 0; display: block; align-items: initial; }
+    .page-view > .hero .container { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(280px, 0.75fr); gap: 48px; align-items: center; max-width: var(--max-width); text-align: left; }
+    .page-view > .hero h1 { font-size: clamp(2.4rem, 5vw, 4.2rem); line-height: 1.13; }
     .home-about { scroll-margin-top: 90px; }
     .page-view > .page-hero { padding-top: clamp(36px, 5vw, 64px); }
     .page-view .section-header { margin-bottom: 48px; }
@@ -2186,23 +2201,41 @@
     @media (max-width: 768px) {
       .content-grid { grid-template-columns: 1fr; }
       .page-view .steps-grid { grid-template-columns: 1fr; }
+      .page-view > .hero .container { grid-template-columns: 1fr; gap: 24px; text-align: center; }
+      .page-view > .hero .hero-photo { max-width: 320px; aspect-ratio: 4 / 5; object-position: center top; margin-inline: auto; }
+      .page-view > .hero .hero-actions { justify-content: center; }
       .content-card { padding: 24px; }
       .page-footer .container { flex-direction: column; text-align: center; }
     }
 
-    @media (max-height: 420px) {
-      .nav-inner { height: 60px; }
-      .nav-logo-crest { width: 34px; height: 34px; }
-      .nav-logo-text { font-size: 0.62rem; }
-      .page-view { padding-top: 60px; }
+    @media (max-height: 260px) {
+      .nav-inner { height: 48px; padding-top: 4px; transform: translateY(3px); }
+      .nav-logo-crest { width: 28px; height: 28px; }
+      .nav-logo-crest .crest-inner { inset: 3px; }
+      .nav-logo-crest .crest-letter { font-size: 12px; }
+      .nav-logo-text { font-size: 0.52rem; }
+      .nav-links { gap: 12px; }
+      .nav-links a { font-size: 0.68rem; }
+      .nav-cta { min-height: 32px; padding: 6px 12px; font-size: 0.68rem !important; }
+      .page-view { min-height: 0; }
+      .page-view > .hero { padding: 8px 0 10px; }
+      .page-view { padding-top: 0; }
       .page-view > .page-hero { padding-top: 0; padding-bottom: 20px; }
-      .page-hero .section-label { margin-bottom: 8px; }
-      .page-hero h1 { font-size: clamp(1.6rem, 5vw, 2.4rem); line-height: 1.05; margin-bottom: 10px; }
-      .page-hero .hero-subtitle { font-size: 0.9rem; margin-bottom: 12px; }
-      .page-hero .btn { padding: 12px 24px; }
+      .page-hero .section-label { margin-bottom: 5px; }
+      .page-hero h1 { font-size: clamp(1.4rem, 4vw, 2rem); line-height: 1.03; margin-bottom: 7px; }
+      .page-hero .hero-subtitle { font-size: 0.82rem; margin-bottom: 8px; }
+      .page-hero .btn { padding: 8px 18px; }
+      .page-view > .hero { padding: 8px 0 10px; }
+      .page-view > .hero .container { display: block; text-align: center; }
+      .page-view > .hero .hero-photo { display: none; }
+      .page-view > .hero .section-label { margin-bottom: 4px; }
+      .page-view > .hero h1 { font-size: clamp(1.25rem, 2vw, 1.55rem); line-height: 1.03; margin-bottom: 0; }
+      .page-view > .hero .lead,
+      .page-view > .hero .hero-actions { display: none; }
     }
 
   </style>
+  <link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
   <nav id="navbar">
@@ -2212,203 +2245,156 @@
         <div class="nav-logo-text">Innovative<br>Projects Hub</div>
       </a>
       <div class="nav-links" aria-label="Main navigation">
-        <a href="#home">Home</a>
-        <a href="#services">Services</a>
-        <a href="#courses">Courses</a>
+        <a href="./">Home</a>
+        <a href="services/">AI Services</a>
+        <a href="training/">Training</a>
+        <a href="who-we-help/">Who We Help</a>
         <a href="#about">About</a>
-        <a href="#faq">FAQ</a>
-        <a href="#book" class="nav-cta">Book a free call</a>
+        <a href="resources/">Resources</a>
+        <a href="faq/">FAQ</a>
+        <a href="https://calendar.app.google/ptUn1uAM312FhpsL9" class="nav-cta" target="_blank" rel="noopener">Book a free call</a>
       </div>
       <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button>
     </div>
   </nav>
 
   <div class="mobile-menu" id="mobileMenu">
-    <a href="#home">Home</a>
-    <a href="#services">Services</a>
-    <a href="#courses">Courses</a>
+    <a href="./">Home</a>
+    <a href="services/">AI Services</a>
+    <a href="training/">Training &amp; Courses</a>
+    <a href="who-we-help/">Who We Help</a>
     <a href="#about">About</a>
-    <a href="#faq">FAQ</a>
-    <a href="#book" class="btn btn-primary"><span>Book a free call</span></a>
+    <a href="resources/">Resources</a>
+    <a href="faq/">FAQ</a>
+    <a href="https://calendar.app.google/ptUn1uAM312FhpsL9" class="btn btn-primary" target="_blank" rel="noopener"><span>Book a free call</span></a>
   </div>
 
   <main id="page-content">
     <div class="page-view" id="home-view">
-      <section class="page-hero">
-        <div class="container">
-          <span class="section-label">Claude training for everyday life and work</span>
-          <h1>Get hours back every week <span class="gradient-text italic">with Claude</span></h1>
-          <p class="hero-subtitle">I help small business owners and busy moms use AI in their everyday work and life, starting with a free 15-minute call.</p>
-          <div class="page-actions"><a href="#book" class="btn btn-primary btn-glow"><span>Book your free 15-minute call</span><span class="btn-arrow">&rarr;</span></a></div>
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <span class="eyebrow">AI training, consulting &amp; implementation</span>
+            <h1>Work Smarter. Save Time. <span class="gradient">Grow Your Business with AI.</span></h1>
+            <p class="lead">Innovative Projects Hub helps small business owners and busy professionals put AI to work through personalized training, practical solutions, and custom AI automation.</p>
+            <div class="hero-actions"><a href="https://calendar.app.google/ptUn1uAM312FhpsL9" class="button" target="_blank" rel="noopener">Book Your Free 15-Minute AI Strategy Call</a><a href="services/" class="button button-secondary">Explore AI Services</a></div>
+            <p class="trust-line">Friendly, practical guidance from a sales leader with nearly 20 years of business experience. Serving Chicago and online.</p>
+          </div>
+          <img class="hero-photo" src="owner-photo.png" alt="Gina, founder of Innovative Projects Hub" width="1024" height="1536" fetchpriority="high">
         </div>
       </section>
 
-      <section>
+      <section class="section">
         <div class="container">
-          <div class="section-header">
-            <span class="section-label">Ways to get started</span>
-            <h2>Choose what fits <span class="gradient-text italic">your day.</span></h2>
-          </div>
-          <div class="content-grid">
-            <article class="content-card"><h3>Claude Starter Session</h3><p>A one-on-one session to set up Claude and use it for real tasks in your business.</p><a class="btn btn-secondary" href="#services">Explore services</a></article>
-            <article class="content-card"><h3>Agent Build Consultation</h3><p>Work together to map a repetitive process and build a custom Claude agent for it.</p><a class="btn btn-secondary" href="#services">Explore services</a></article>
-            <article class="content-card"><h3>Online Courses</h3><p>Short, friendly lessons for small business owners and moms who want to learn at their own pace.</p><a class="btn btn-secondary" href="#courses">Explore courses</a></article>
-          </div>
-        </div>
-      </section>
-
-      <section class="how-it-works">
-        <div class="container">
-          <div class="section-header"><span class="section-label">How it works</span><h2>Three simple steps</h2></div>
-          <div class="steps-grid">
-            <article class="step"><div class="step-number">01</div><h3>Book a free 15-minute call.</h3><p>Tell me what takes up your time and what you would like help with.</p></article>
-            <article class="step"><div class="step-number">02</div><h3>Learn Claude in a one-hour session.</h3><p>Your session is built around your business and the tasks you actually do.</p></article>
-            <article class="step"><div class="step-number">03</div><h3>Keep going at your pace.</h3><p>Continue with custom agents or learn more through online courses.</p></article>
-          </div>
-          <div class="page-actions" style="margin-top:32px"><a href="#book" class="btn btn-primary"><span>Book your free 15-minute call</span></a></div>
-        </div>
-      </section>
-
-      <section class="meet-strategist home-about" id="about">
-        <div class="container">
-          <div class="meet-grid">
-            <div class="meet-photo-col">
-              <div class="meet-badge">Founder &amp; Business Growth Strategist</div>
-              <div class="meet-photo-wrapper">
-                <img src="owner-photo.png" alt="Gina, founder of Innovative Projects Hub" class="meet-photo" width="1024" height="1536" loading="lazy">
-              </div>
-            </div>
-            <div class="meet-content">
-              <span class="section-label">Your guide to practical AI</span>
-              <h2>Hi, I'm <span class="gradient-text italic">Gina</span></h2>
-              <p class="meet-intro">I'm the founder of Innovative Projects Hub in Chicago. I've spent nearly 20 years in sales leadership, working side by side with business owners and coaching teams to work smarter and grow. My experience includes retail stores and small businesses, leading and developing team members across different roles. I've seen how much time owners lose to tasks that pull them away from what they do best.</p>
-              <p class="meet-intro">I'm also a mom, so I know the juggle: work, school emails, practice schedules, dinner, and everything in between. When I started using Claude, an AI assistant, it changed how I manage all of it. Now I teach others to do the same.</p>
-              <p class="meet-intro">At IPH, I help small business owners and busy moms use Claude in their everyday work and life. We start with a free 15-minute call. From there, I'll help you set it up, learn the basics in plain language, and build custom AI agents when you're ready. No tech background needed.</p>
-              <div class="meet-strengths">
-                <article class="meet-strength"><div><h3>Sales leadership</h3><p>Nearly two decades of coaching teams and supporting business owners.</p></div></article>
-                <article class="meet-strength"><div><h3>Retail and small business</h3><p>Practical experience with the work that fills an owner's day.</p></div></article>
-                <article class="meet-strength"><div><h3>AI that feels approachable</h3><p>Learn Claude in plain language, at a pace that feels comfortable.</p></div></article>
-              </div>
-              <a href="#book" class="btn btn-primary"><span>Book your free 15-minute call</span></a>
-            </div>
+          <div class="section-heading"><span class="eyebrow">Practical outcomes</span><h2>Make room for <span class="gradient">the work that matters.</span></h2></div>
+          <div class="cards">
+            <article class="card"><div class="icon-number">01</div><h3>Save Time</h3><p>Reduce repetitive work and make more room for customers, family, and the work only you can do.</p></article>
+            <article class="card"><div class="icon-number">02</div><h3>Work Smarter</h3><p>Use AI to support everyday business operations, communication, planning, and organization.</p></article>
+            <article class="card"><div class="icon-number">03</div><h3>Grow with Intention</h3><p>Spend more time on customer relationships, sales, and thoughtful business development.</p></article>
           </div>
         </div>
       </section>
 
-      <section>
+      <section class="section section-tint">
         <div class="container">
-          <div class="section-header"><span class="section-label">Kind words</span><h2>Testimonials</h2></div>
-          <div class="content-grid">
-            <article class="content-card testimonial-card"><h3>Testimonial coming soon</h3></article>
-            <article class="content-card testimonial-card"><h3>Testimonial coming soon</h3></article>
-            <article class="content-card testimonial-card"><h3>Testimonial coming soon</h3></article>
+          <div class="section-heading"><span class="eyebrow">Who we help</span><h2>AI support shaped around <span class="gradient">your kind of work.</span></h2></div>
+          <div class="cards cards-3">
+            <article class="card"><h3>Small Business Owners</h3><p>Find practical ways to simplify customer communication and recurring work.</p></article>
+            <article class="card"><h3>Entrepreneurs &amp; Startups</h3><p>Build useful AI habits and workflows as your business takes shape.</p></article>
+            <article class="card"><h3>Service Businesses</h3><p>Explore support for inquiries, follow-ups, schedules, and business documents.</p></article>
+            <article class="card"><h3>Retail Businesses</h3><p>Use AI to help organize information, prepare communications, and plan daily tasks.</p></article>
+            <article class="card"><h3>Working Professionals</h3><p>Learn approachable ways to use AI for writing, planning, research, and organization.</p></article>
+            <article class="card"><h3>Individuals &amp; Busy Families</h3><p>Explore everyday uses for household planning, family schedules, and busy routines.</p></article>
+          </div>
+          <p style="text-align:center;margin-top:24px"><a class="card-link" href="who-we-help/">See who we help &rarr;</a></p>
+        </div>
+      </section>
+
+      <section class="section" id="services-preview">
+        <div class="container">
+          <div class="section-heading"><span class="eyebrow">AI Services</span><h2>Learn it, apply it, <span class="gradient">make it useful.</span></h2><p class="lead">Start with learning and guidance. When a process is clear and a good fit, explore custom tools and automation.</p></div>
+          <div class="cards cards-3">
+            <article class="card"><h3>AI Business Training</h3><p>Personalized beginner-friendly sessions for real tasks in your business.</p><a class="card-link" href="claude-training/">Explore training &rarr;</a></article>
+            <article class="card"><h3>Claude &amp; ChatGPT Training</h3><p>Learn prompting, projects, research, writing, and ways to review AI output.</p><a class="card-link" href="training/">View training options &rarr;</a></article>
+            <article class="card"><h3>Custom AI Agents</h3><p>Plan a focused assistant for a specific process, with clear limits and human review.</p><a class="card-link" href="custom-ai-agents/">Explore custom agents &rarr;</a></article>
+            <article class="card"><h3>AI Workflow Consulting</h3><p>Map a repetitive workflow and identify useful, realistic opportunities to improve it.</p><a class="card-link" href="ai-automation/">Explore workflow consulting &rarr;</a></article>
+            <article class="card"><h3>AI Consulting</h3><p>Get help choosing a practical starting point, tools, and next steps for your team.</p><a class="card-link" href="ai-consulting/">Explore consulting &rarr;</a></article>
+            <article class="card"><h3>Ongoing AI Coaching</h3><p>Keep learning with personalized support as your confidence and needs develop.</p><a class="card-link" href="services/">View all services &rarr;</a></article>
           </div>
         </div>
       </section>
-      <section class="final-cta"><div class="container cta-wrapper"><span class="section-label">Start with a conversation</span><h2>Ready to make room in your week?</h2><p>Let’s talk about what Claude could help you with.</p><div class="cta-buttons"><a href="#book" class="btn btn-primary"><span>Book your free 15-minute call</span></a></div></div></section>
+
+      <section class="section section-tint home-about" id="about">
+        <div class="container split">
+          <img class="founder-photo" src="owner-photo.png" alt="Gina, founder of Innovative Projects Hub" width="1024" height="1536" loading="lazy">
+          <div class="founder-copy">
+            <span class="eyebrow">Why learn AI with IPH?</span><h2>Practical guidance, <span class="gradient">grounded in real work.</span></h2>
+            <p>Hi, I'm Gina, founder of Innovative Projects Hub in Chicago. I've spent nearly 20 years in sales leadership, working alongside business owners and coaching teams to work smarter and grow. My experience includes retail stores and small businesses, leading and developing team members across different roles.</p>
+            <p>I'm also a mom, so I know the juggle of work, school emails, practice schedules, dinner, and everything in between. When I started using AI tools like Claude, I found practical ways to manage everyday tasks. Now I help small business owners and professionals learn what AI can and cannot do, then apply it to their own real-world scenarios.</p>
+            <p>Instead of relying only on generic tutorials, we focus on your questions, your comfort level, and the tasks you actually do. Training is available online and in person.</p>
+            <a class="button button-secondary" href="about/">More about Gina</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-dark">
+        <div class="container">
+          <div class="section-heading"><span class="eyebrow">How it works</span><h2>A practical path from question to confident use.</h2></div>
+          <div class="steps">
+            <article class="step"><div class="step-num">01</div><h3>Discover</h3><p>Talk through your goals, time-consuming tasks, and comfort with AI.</p></article>
+            <article class="step"><div class="step-num">02</div><h3>Learn &amp; Implement</h3><p>Get plain-language training and, where appropriate, plan a workflow or custom solution.</p></article>
+            <article class="step"><div class="step-num">03</div><h3>Grow</h3><p>Apply what you learned, review the results, and choose useful next steps.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-heading"><span class="eyebrow">Featured support</span><h2>Start with a session built around <span class="gradient">your business.</span></h2><p class="lead">The one-on-one Claude Starter Session is a practical introduction. We can also discuss other AI tools when they fit your needs.</p></div>
+          <div class="cards cards-2">
+            <article class="card"><span class="pill">60 minutes · $150</span><h3 style="margin-top:14px">AI Business Starter Session</h3><p>Set up Claude, work through three real tasks, create a Project that knows your business, and leave with a written next-steps list.</p><a class="card-link" href="claude-training/">See session details &rarr;</a></article>
+            <article class="card"><span class="pill">Free · 15 minutes</span><h3 style="margin-top:14px">AI Strategy Call</h3><p>Share what takes up your time and what you would like AI to help with. We’ll discuss whether training or consulting is a sensible next step.</p><a class="card-link" href="https://calendar.app.google/ptUn1uAM312FhpsL9" target="_blank" rel="noopener">Choose a time &rarr;</a></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-tint">
+        <div class="container">
+          <div class="section-heading"><span class="eyebrow">Why clients choose IPH</span><h2>Personal, practical, <span class="gradient">and grounded.</span></h2></div>
+          <div class="cards cards-3">
+            <article class="card"><h3>Business context</h3><p>Nearly 20 years in sales leadership and experience working with retail stores and small businesses.</p></article>
+            <article class="card"><h3>Plain-language learning</h3><p>Understand the steps and choices without needing a technical background.</p></article>
+            <article class="card"><h3>Your work comes first</h3><p>Practice with relevant examples, and review AI-generated work before relying on it.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container resource-band">
+          <div><span class="eyebrow">Free resource</span><h2 style="font-size:1.75rem">The Small Business AI Opportunity Checklist</h2><p>Use 18 practical prompts across marketing, customer service, administration, sales, scheduling, and organization to spot a low-risk task to try.</p></div>
+          <a class="button" href="resources/small-business-ai-opportunity-checklist.txt" download>Download the free checklist</a>
+        </div>
+      </section>
+
+      <section class="section section-tint">
+        <div class="container faq-list">
+          <div class="section-heading"><span class="eyebrow">FAQ</span><h2>Questions business owners ask about AI.</h2></div>
+          <article class="faq-item"><h2>Do I need technical experience to start?</h2><p>No. Sessions start with everyday tasks and explain the steps in plain language.</p></article>
+          <article class="faq-item"><h2>Do you only teach Claude?</h2><p>No. Claude is one option we teach. We can also discuss ChatGPT and other tools based on your goals and the available features.</p></article>
+          <article class="faq-item"><h2>Can AI make mistakes?</h2><p>Yes. AI can produce incorrect or incomplete answers. Review its work, verify important information, and use your judgment before acting on it.</p></article>
+          <article class="faq-item"><h2>Are sessions online or in person?</h2><p>Sessions are available online or in person.</p></article>
+          <p style="margin-top:22px"><a class="card-link" href="faq/">Read all frequently asked questions &rarr;</a></p>
+        </div>
+      </section>
+
+      <section class="cta-band"><div class="container"><span class="eyebrow">Start with a conversation</span><h2>Book Your Free 15-Minute AI Strategy Call</h2><p>Bring one business task or question. We’ll discuss your goals and a practical next step.</p><a class="button" href="https://calendar.app.google/ptUn1uAM312FhpsL9" target="_blank" rel="noopener">Book your free call</a></div></section>
     </div>
 
-    <div class="page-view" id="services-view" hidden>
-      <section class="page-hero"><div class="container"><span class="section-label">Services</span><h1>Claude help for <span class="gradient-text italic">your everyday work</span></h1><p class="hero-subtitle">Start with a free conversation, then choose the kind of support that works for you.</p><div class="page-actions"><a href="#book" class="btn btn-primary"><span>Book your free 15-minute call</span></a></div></div></section>
-      <section><div class="container"><div class="content-grid">
-        <article class="content-card"><h2>Free Claude Fit Call</h2><p><strong>Who it's for:</strong> Anyone curious whether Claude could help with their business.</p><p><strong>What's included:</strong> A 15-minute conversation by video or phone about your business, biggest time-wasters, and whether Claude is a good fit.</p><p class="price" data-price="fitCall"></p><a href="#book" class="btn btn-primary"><span>Book your free 15-minute call</span></a></article>
-        <article class="content-card"><h2>Claude Starter Session</h2><p><strong>Who it's for:</strong> Small business owners ready to learn Claude with their own work in mind.</p><p><strong>What's included:</strong></p><ul><li>One hour, one-on-one and live</li><li>Claude set up with you</li><li>Three real business tasks completed</li><li>A Project that knows your business</li><li>A written next-steps list</li></ul><p class="price" data-price="starter"></p><a href="#book" class="btn btn-primary"><span>Book your free 15-minute call</span></a></article>
-        <article class="content-card"><h2>Starter Session 3-Pack</h2><p><strong>Who it's for:</strong> Owners who want time to practice and build steady habits.</p><p><strong>What's included:</strong> Three one-hour sessions over three to six weeks to build habits and set up simple workflows.</p><p class="price" data-price="starterPack"></p><a href="#book" class="btn btn-primary"><span>Book your free 15-minute call</span></a></article>
-        <article class="content-card"><h2>Agent Build Consultation</h2><p><strong>Who it's for:</strong> Business owners who have a repetitive process they want to improve. Best after a Starter Session.</p><p><strong>What's included:</strong> Map one process and build a custom Claude agent together, connected to tools such as Gmail, Google Calendar, and Google Drive. Includes a how-to guide and a check-in after one week.</p><p class="price" data-price="agent"></p><a href="#book" class="btn btn-primary"><span>Book your free 15-minute call</span></a></article>
-      </div></div></section>
-    </div>
-
-    <div class="page-view" id="courses-view" hidden>
-      <section class="page-hero"><div class="container"><span class="section-label">Online courses</span><h1>Learn Claude in <span class="gradient-text italic">small steps</span></h1><p class="hero-subtitle">Short lessons for real life and work, made for people who are new to AI.</p><div class="page-actions"><a href="#book" class="btn btn-primary"><span>Book your free 15-minute call</span></a><a href="#waitlist" class="btn btn-secondary">Join the waitlist</a></div></div></section>
-      <section><div class="container"><div class="content-grid">
-        <article class="content-card"><h2>Claude for Small Business</h2><p class="price" data-price="courses"></p><ol><li>Getting started</li><li>The prompt formula</li><li>Customer messages</li><li>Marketing posts and emails</li><li>Operations: quotes, policies, and schedules</li><li>Projects: teach Claude your business once</li><li>What's next: agents and automation</li></ol><a href="#waitlist" class="btn btn-primary"><span>Join the waitlist</span></a></article>
-        <article class="content-card"><h2>Claude for Moms</h2><p class="price" data-price="courses"></p><p class="track-label">Shared core lessons</p><p>Setup, the prompt formula, meal plans and grocery lists, school emails, and family calendar planning.</p><p class="track-label" style="margin-top:20px">Stay-at-home moms</p><p>Household routines, budgets, kids' activities and learning, and side-hustle ideas.</p><p class="track-label" style="margin-top:20px">Working moms with kids in sports</p><p>Game and practice schedules, carpools, team-parent messages, and work tasks between calls.</p><a href="#waitlist" class="btn btn-primary"><span>Join the waitlist</span></a></article>
-      </div>
-      <div id="waitlist" class="waitlist-embed"><iframe data-waitlist-form title="Join the Innovative Projects Hub course waitlist" loading="lazy">Loading Google Form…</iframe></div>
-      </div></section>
-      <section class="final-cta"><div class="container cta-wrapper"><span class="section-label">Want personal help?</span><h2>Start with a free call.</h2><div class="cta-buttons"><a href="#book" class="btn btn-primary"><span>Book your free 15-minute call</span></a></div></div></section>
-    </div>
-
-    <div class="page-view" id="faq-view" hidden>
-      <section class="page-hero"><div class="container"><span class="section-label">Frequently asked questions</span><h1>Questions about <span class="gradient-text italic">getting started?</span></h1><p class="hero-subtitle">Clear answers, in everyday language.</p><div class="page-actions"><a href="#book" class="btn btn-primary"><span>Book your free 15-minute call</span></a></div></div></section>
-      <section><div class="container faq-list">
-        <article class="faq-item"><h2>Do I need tech skills?</h2><p>No. If you can send an email, you can use Claude. We'll take it one step at a time.</p></article>
-        <article class="faq-item"><h2>What is Claude?</h2><p>Claude is an AI assistant made by Anthropic that can help you write, plan, and organize.</p></article>
-        <article class="faq-item"><h2>Is my business information safe?</h2><p>Only share information you choose to share. I'll show you where to review the privacy settings so you can decide what feels right for you. Avoid entering sensitive information unless you understand how it will be used.</p></article>
-        <article class="faq-item"><h2>Do I have to pay for Claude?</h2><p>There's a free plan, and paid plans add more features. We'll look at your needs and choose what makes sense in your session.</p></article>
-        <article class="faq-item"><h2>Are sessions online or in person?</h2><p>Sessions are available online or in person.</p></article>
-        <article class="faq-item"><h2>What's the difference between a Starter Session and an Agent Build?</h2><p>A Starter Session helps you learn Claude and use it for everyday tasks. An Agent Build focuses on one repetitive process and guides you through making a custom Claude agent for it. It's best to start with a Starter Session.</p></article>
-      </div></section>
-    </div>
-
-    <div class="page-view" id="book-view" hidden>
-      <section class="page-hero"><div class="container"><span class="section-label">Free 15-minute call</span><h1>Let's find a useful place to <span class="gradient-text italic">start with Claude</span></h1><p class="hero-subtitle">We'll talk about your business, the tasks taking up your time, and whether Claude might be a good fit. The call is by video or phone.</p><ol class="intake-list"><li>What's your business?</li><li>What tasks take up most of your time?</li><li>How comfortable are you with technology (1 to 5)?</li></ol><div class="page-actions"><a href="#book" data-booking-link class="btn btn-primary btn-glow"><span>Book your free 15-minute call</span><span class="btn-arrow">&rarr;</span></a></div></div></section>
-    </div>
   </main>
 
-  <footer class="page-footer"><div class="container"><div class="footer-logo"><div class="nav-logo-crest"><div class="crest-border"></div><div class="crest-inner"></div><span class="crest-letter">iph</span></div><div class="nav-logo-text">Innovative<br>Projects Hub</div></div><nav class="page-footer-links" aria-label="Footer navigation"><a href="#services">Services</a><a href="#courses">Courses</a><a href="#about">About</a><a href="#faq">FAQ</a><a href="#book">Book a free call</a></nav><span>&copy; 2026 Innovative Projects Hub</span></div></footer>
+  <footer class="site-footer"><div class="container"><div class="footer-grid"><div><a href="./" class="brand"><span class="brand-mark">iph</span><span class="brand-name">Innovative<br>Projects Hub</span></a><p class="footer-note">Practical AI training, consulting, and implementation for small businesses and professionals in Chicago and online.</p><p class="footer-note"><a href="mailto:iph.growthofficer@gmail.com">iph.growthofficer@gmail.com</a></p></div><div><h2>Explore</h2><nav class="footer-nav"><a href="services/">AI Services</a><a href="training/">Training &amp; Courses</a><a href="who-we-help/">Who We Help</a><a href="about/">About Gina</a><a href="resources/">Free Resources</a><a href="blog/">Blog</a><a href="faq/">FAQ</a></nav></div><div><h2>Policies &amp; contact</h2><nav class="footer-nav"><a href="contact/">Contact</a><a href="privacy-policy/">Privacy Policy</a><a href="terms-of-service/">Terms of Service</a><a href="https://calendar.app.google/ptUn1uAM312FhpsL9" target="_blank" rel="noopener">Book a free call</a></nav></div></div><div class="copyright">&copy; 2026 Innovative Projects Hub. Educational information only; review AI-generated content before use.</div></div></footer>
 
   <script>
-    const SITE_CONFIG = {
-      BOOKING_URL: 'https://calendar.app.google/ptUn1uAM312FhpsL9',
-      WAITLIST_FORM_URL: 'https://docs.google.com/forms/d/e/1FAIpQLSdr2mfkw3ZXfODeOGBS8DubnXnxNd7j9Jei8WbFBDp-SIFO8A/viewform?embedded=true',
-      PRICES: {
-        fitCall: 'Free',
-        starter: '$150',
-        starterPack: '$399',
-        agent: '$200/hour, 2-hour minimum',
-        courses: '$47 to $97, launching soon'
-      }
-    };
-
-    const PAGE_META = {
-      home: ['Get hours back every week with Claude | Innovative Projects Hub', 'Claude training for small business Chicago. Friendly AI help for small business owners and busy moms, starting with a free 15-minute call.'],
-      services: ['Claude Training and Services | Innovative Projects Hub Chicago', 'Explore Claude training for small business owners in Chicago, including one-on-one sessions, a three-session package, and custom agent guidance.'],
-      courses: ['Claude Courses for Small Business and Moms | IPH', 'Learn Claude with short, practical online courses for small business owners and moms. Join the waitlist for upcoming courses.'],
-      faq: ['Claude Training FAQ | Innovative Projects Hub', 'Answers about Claude, privacy settings, training sessions, and getting started with AI for small business owners.'],
-      book: ['Book a Free Claude Fit Call | Innovative Projects Hub', 'Book a free 15-minute call to discuss Claude training and AI help for small business owners in Chicago.']
-    };
-
-    const routeNames = Object.keys(PAGE_META);
-    const metaDescription = document.querySelector('meta[name="description"]');
-    const ogTitle = document.querySelector('meta[property="og:title"]');
-    const ogDescription = document.querySelector('meta[property="og:description"]');
-
-    function updatePage() {
-      const requestedRoute = window.location.hash.slice(1).split('?')[0];
-      const route = requestedRoute === 'waitlist' ? 'courses' : requestedRoute === 'about' ? 'home' : routeNames.includes(requestedRoute) ? requestedRoute : 'home';
-      document.querySelectorAll('.page-view').forEach((view) => {
-        view.hidden = view.id !== `${route}-view`;
-      });
-      document.title = PAGE_META[route][0];
-      metaDescription.content = PAGE_META[route][1];
-      ogTitle.content = PAGE_META[route][0];
-      ogDescription.content = PAGE_META[route][1];
-      document.querySelectorAll('[data-price]').forEach((price) => {
-        price.textContent = SITE_CONFIG.PRICES[price.dataset.price];
-      });
-      document.querySelectorAll('a').forEach((link) => {
-        const label = link.textContent.trim();
-        if (!link.hasAttribute('data-booking-link') && !link.classList.contains('nav-cta') && !label.includes('Book your free 15-minute call') && !label.includes('Book a free call')) return;
-        link.href = SITE_CONFIG.BOOKING_URL === 'BOOKING_URL' ? '#book' : SITE_CONFIG.BOOKING_URL;
-        link.target = SITE_CONFIG.BOOKING_URL === 'BOOKING_URL' ? '_self' : '_blank';
-        link.rel = SITE_CONFIG.BOOKING_URL === 'BOOKING_URL' ? '' : 'noopener';
-      });
-      document.querySelector('[data-waitlist-form]').src = SITE_CONFIG.WAITLIST_FORM_URL;
-      if (requestedRoute === 'waitlist') {
-        document.getElementById('waitlist').scrollIntoView({ behavior: 'smooth' });
-      } else if (requestedRoute === 'about') {
-        const aboutSection = document.getElementById('about');
-        const root = document.documentElement;
-        const previousScrollBehavior = root.style.scrollBehavior;
-        root.style.scrollBehavior = 'auto';
-        window.scrollTo(0, window.scrollY + aboutSection.getBoundingClientRect().top - 90);
-        root.style.scrollBehavior = previousScrollBehavior;
-      } else {
-        window.scrollTo(0, 0);
-      }
-    }
-
     const navToggle = document.getElementById('navToggle');
     const mobileMenu = document.getElementById('mobileMenu');
     navToggle.addEventListener('click', () => {
@@ -2419,8 +2405,6 @@
       mobileMenu.classList.remove('open');
       navToggle.setAttribute('aria-expanded', 'false');
     }));
-    window.addEventListener('hashchange', updatePage);
-    updatePage();
   </script>
 </body>
 </html>

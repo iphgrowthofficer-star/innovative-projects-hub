@@ -4,85 +4,98 @@ Last updated: 2026-11-18
 
 ## Current Status
 
-- The updated site is live at https://iphgrowthofficer-star.github.io/innovative-projects-hub/.
-- GitHub Pages deploys the root `index.html` from the `main` branch.
-- Published site was last updated at commit `20fec32` (`Fit homepage header in short viewports`); newer homepage About changes may still be local until committed and pushed.
-- Current branch at last check was `main` with the new homepage About edits not yet published.
-- No build tools or framework are used. The whole website is a static HTML file with embedded CSS and JavaScript.
+- Live site: https://iphgrowthofficer-star.github.io/innovative-projects-hub/
+- Published baseline: `fac39ab` (`Move founder story onto homepage and align header`).
+- Current redesign branch: `ai-platform-repositioning`.
+- The redesign is local and intentionally unpublished. The brief says not to publish to production without owner approval.
+- The site is static HTML/CSS/JavaScript with no build system or package dependencies.
 
-## Website Files
+## Project Files
 
-- `index.html`: all site content, styling, route metadata, price/link configuration, and scripts.
-- `owner-photo.png`: Gina's portrait used in the Home founder section.
-- `office-photo.jpg`: available image, not currently used.
-- `IPH Website/CLAUDE.md`: project/design documentation and content conventions.
+- `index.html`: Home page and brand styles.
+- `assets/site.css`: shared responsive design for dedicated pages.
+- `assets/site.js`: mobile menu behavior.
+- `owner-photo.png`: founder portrait.
+- `resources/small-business-ai-opportunity-checklist.txt`: downloadable resource.
+- `robots.txt` and `sitemap.xml`: crawl instructions and current routes.
+- `IPH Website/CLAUDE.md`: project conventions and design notes.
 - `HANDOFF.md`: this resume note.
+
+## Business Positioning
+
+IPH provides platform-independent AI training, consulting, and implementation, primarily for small business owners and entrepreneurs. Professionals, startups, service and retail businesses, busy moms, and individuals are also included. Claude is a featured training option, but the brand is not Claude-only. Avoid exaggerated claims, invented outcomes, client names, credentials, or testimonials.
 
 ## Pages
 
-The site uses hash routes within `index.html`, not separate HTML pages:
+Each page is a real directory route with its own `index.html`:
 
-- Home: `#home`
-- Services: `#services`
-- Courses: `#courses`
-- About: `#about` anchor to Gina's founder section on Home
-- FAQ: `#faq`
-- Book: `#book`
-- Waitlist anchor on Courses: `#waitlist`
+- `/` Home
+- `/services/`
+- `/claude-training/`
+- `/ai-automation/`
+- `/ai-consulting/`
+- `/custom-ai-agents/`
+- `/training/`
+- `/courses/`
+- `/who-we-help/`
+- `/about/`
+- `/ai-training-chicago/`
+- `/resources/`
+- `/blog/` with article outlines and a reusable article template, not pretend-finished posts
+- `/faq/`
+- `/contact/`
+- `/privacy-policy/`
+- `/terms-of-service/`
+- `/404.html`
 
-Navigation switches the visible view and updates the document title and description. The navigation and pages include booking CTAs.
+The About navigation link on Home anchors to Gina's founder section; the dedicated `/about/` page is also available.
 
-## Business Content
+## Offers and Integrations
 
-- IPH now teaches small business owners and busy moms to use Claude in everyday work and life, and helps business owners build custom Claude agents.
-- The Home page uses the headline “Get hours back every week with Claude,” includes offer cards, three steps, Gina's photo and full founder story, three testimonial placeholders, and booking CTAs.
-- Services list the Free Claude Fit Call, Claude Starter Session ($150), Starter Session 3-Pack ($399), and Agent Build Consultation ($200/hour, two-hour minimum).
-- Courses cover Claude for Small Business and Claude for Moms. Course pricing is shown as “$47 to $97, launching soon.”
-- The Home founder section includes Gina's photo and bio about nearly 20 years in sales leadership, coaching and developing teams, retail and small-business experience, being a mom, and using Claude in daily life.
-- FAQ says sessions are available online or in person.
-- Do not add past-client names or imply unsupported testimonials or results. Keep copy friendly and non-technical.
+- The existing Claude Starter Session is $150 for one hour and retains its current deliverables.
+- The existing three-session package is $399.
+- The existing Agent Build Consultation is $200/hour with a two-hour minimum. This is a consultation/planning offer; integrations, deployment, testing, and maintenance are not automatically included.
+- Course outlines remain Claude for Small Business and Claude for Moms. The existing $47–$97 range is described as a launch range for courses in development; confirm before enrollment.
+- Booking uses the existing Google Calendar URL: `https://calendar.app.google/ptUn1uAM312FhpsL9`.
+- Courses embed the existing Google Form: `https://forms.gle/FWXBfhTTXi2qDUtn6`. It asks course interest, name, and email.
+- No other email signup form or analytics ID is fabricated.
+- Contact email already used by IPH: `iph.growthofficer@gmail.com`.
 
-## Integrations
+## Completed Locally
 
-Both URLs are in the `SITE_CONFIG` object in `index.html`:
+- Platform-independent AI positioning and a rebuilt Home flow.
+- Benefit cards, audience cards, service previews, founder credibility, three-step process, featured offers, differentiators instead of testimonials, real downloadable checklist, FAQ, and booking CTAs.
+- Dedicated pages for services, training, audiences, Chicago, resources, blog outlines, contact, FAQ, and policies.
+- Unique page titles/descriptions, canonicals, sitemap, robots, Organization/Person/WebSite and relevant Service/FAQ structured data.
+- Policy pages explicitly request owner/legal review; no physical office address or analytics IDs are invented.
 
-- `BOOKING_URL`: `https://calendar.app.google/ptUn1uAM312FhpsL9`. Booking buttons open this Google Calendar appointment page. Confirm that the appointment type and availability are still correct.
-- `WAITLIST_FORM_URL`: `https://docs.google.com/forms/d/e/1FAIpQLSdr2mfkw3ZXfODeOGBS8DubnXnxNd7j9Jei8WbFBDp-SIFO8A/viewform?embedded=true`. The Courses page embeds this live Google Form. It asks which course interests the visitor, name, and email. The short link provided was `https://forms.gle/FWXBfhTTXi2qDUtn6`.
-- Prices are centralized in `SITE_CONFIG.PRICES` in the same file.
+## Owner Inputs / Follow-Ups
 
-The form was opened and its fields were verified in the browser. Confirm that it is still accepting responses and that submissions are recorded as expected.
-
-## Remaining Follow-Ups
-
-- Confirm the Google Calendar appointment schedule and availability.
-- Confirm the Google Form accepts responses and records them as expected.
-- Replace the three “Testimonial coming soon” cards when real testimonials are available.
-- Course prices are intentionally labeled as launching soon and may need updating before launch.
+- Confirm the Google Calendar event type and availability.
+- Confirm Google Form responses remain enabled and arrive as expected.
+- Have a qualified professional review the privacy and terms drafts before treating them as final policies.
+- Provide GA4, Google Search Console, and Bing Webmaster IDs or access if analytics and webmaster setup should be completed.
+- For local SEO, verify or create Google Business Profile and Bing Places only if eligible; keep business details consistent, consider suitable local directories and LinkedIn presence, and request only genuine customer reviews.
+- The site does not claim a public office address. Confirm location details before adding any address or map.
+- Consider local networking with Chicago small-business groups after confirming the service area and meeting arrangements.
+- Confirm whether group training will be offered and approve any future pricing before publication.
+- Do not add testimonials unless genuine and authorized.
 
 ## Local Preview
 
-Open `index.html` directly in a browser, or from the repository folder run:
+From the repository folder run:
 
 ```sh
 python3 -m http.server 8000
 ```
 
-Then visit http://localhost:8000. There are no package installs or build steps.
+Open http://localhost:8000. The Python command is only for local static preview; no dependencies/build step are needed.
 
-## Resume / Publish Workflow
+## Resume and Publish
 
 ```sh
 cd "/Users/growthofficer/Learning/IPH Start up/innovative-projects-hub"
 git status --short --branch
 ```
 
-Edit `index.html` for website changes and update both `IPH Website/CLAUDE.md` and `HANDOFF.md` when page structure or project status changes. After validating locally:
-
-```sh
-git diff --check
-git add index.html "IPH Website/CLAUDE.md" HANDOFF.md
-git commit -m "Describe the site update"
-git push origin main
-```
-
-GitHub Pages deploys automatically from `main`. Check the repository's Actions page if the public site does not update shortly after the push.
+Validate internal paths, mobile navigation, meta tags, and `git diff --check`. Update `IPH Website/CLAUDE.md` and this handoff if structure or status changes. After explicit owner approval only, commit the feature branch, merge to `main`, push, and verify GitHub Pages Actions succeeds. Do not publish without that approval.
