@@ -71,12 +71,12 @@ Static website for Innovative Projects Hub, offering friendly Claude training fo
 
 ## Page Views
 
-The single HTML file uses hash routes, so each view has a direct URL fragment and its own document title and description:
+The single HTML file uses hash routes for the main views. Each page view has its own document title and description; About links point to the founder section on Home:
 
-1. **Home** (`#home`) — headline, offer links, three-step process, placeholder testimonials, booking CTA
+1. **Home** (`#home`) — headline, offer links, three-step process, Gina's photo and founder story, placeholder testimonials, booking CTA
 2. **Services** (`#services`) — free fit call, Starter Session, 3-Pack, and Agent Build Consultation
 3. **Courses** (`#courses`) — Claude for Small Business and Claude for Moms, plus a name/email waitlist form
-4. **About** (`#about`) — Gina's photo and 20+ years of business growth, sales leadership, retail, small-business, and team-development experience
+4. **About** (`#about`) — anchor to Gina's founder section on Home, including her photo and nearly 20 years in sales leadership, retail, small business, and team development
 5. **FAQ** (`#faq`) — six questions about Claude, privacy, plans, sessions, and service differences
 6. **Book** (`#book`) — free call details, intake questions, and booking CTA
 
@@ -101,7 +101,7 @@ The single HTML file uses hash routes, so each view has a direct URL fragment an
 
 ## Interactions
 
-- Hash navigation switches between six page views and updates the document title and description.
+- Hash navigation switches between the Home, Services, Courses, FAQ, and Book views and updates the document title and description. About links scroll to the founder section on Home.
 - The mobile hamburger button opens and closes the responsive navigation.
 
 ## Responsive Breakpoints

@@ -235,6 +235,7 @@
       align-items: center;
       justify-content: space-between;
       height: 76px;
+      transform: translateY(6px);
     }
 
     .nav-logo {
@@ -2147,6 +2148,7 @@
     .page-view[hidden] { display: none !important; }
     .page-view { min-height: calc(100vh - 76px); padding-top: 76px; }
     .page-view > section { padding: clamp(72px, 9vw, 120px) 0; }
+    .home-about { scroll-margin-top: 90px; }
     .page-view > .page-hero { padding-top: clamp(36px, 5vw, 64px); }
     .page-view .section-header { margin-bottom: 48px; }
     .page-hero { background: var(--off-white); }
@@ -2267,6 +2269,32 @@
         </div>
       </section>
 
+      <section class="meet-strategist home-about" id="about">
+        <div class="container">
+          <div class="meet-grid">
+            <div class="meet-photo-col">
+              <div class="meet-badge">Founder &amp; Business Growth Strategist</div>
+              <div class="meet-photo-wrapper">
+                <img src="owner-photo.png" alt="Gina, founder of Innovative Projects Hub" class="meet-photo" width="1024" height="1536" loading="lazy">
+              </div>
+            </div>
+            <div class="meet-content">
+              <span class="section-label">Your guide to practical AI</span>
+              <h2>Hi, I'm <span class="gradient-text italic">Gina</span></h2>
+              <p class="meet-intro">I'm the founder of Innovative Projects Hub in Chicago. I've spent nearly 20 years in sales leadership, working side by side with business owners and coaching teams to work smarter and grow. My experience includes retail stores and small businesses, leading and developing team members across different roles. I've seen how much time owners lose to tasks that pull them away from what they do best.</p>
+              <p class="meet-intro">I'm also a mom, so I know the juggle: work, school emails, practice schedules, dinner, and everything in between. When I started using Claude, an AI assistant, it changed how I manage all of it. Now I teach others to do the same.</p>
+              <p class="meet-intro">At IPH, I help small business owners and busy moms use Claude in their everyday work and life. We start with a free 15-minute call. From there, I'll help you set it up, learn the basics in plain language, and build custom AI agents when you're ready. No tech background needed.</p>
+              <div class="meet-strengths">
+                <article class="meet-strength"><div><h3>Sales leadership</h3><p>Nearly two decades of coaching teams and supporting business owners.</p></div></article>
+                <article class="meet-strength"><div><h3>Retail and small business</h3><p>Practical experience with the work that fills an owner's day.</p></div></article>
+                <article class="meet-strength"><div><h3>AI that feels approachable</h3><p>Learn Claude in plain language, at a pace that feels comfortable.</p></div></article>
+              </div>
+              <a href="#book" class="btn btn-primary"><span>Book your free 15-minute call</span></a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section>
         <div class="container">
           <div class="section-header"><span class="section-label">Kind words</span><h2>Testimonials</h2></div>
@@ -2299,35 +2327,6 @@
       <div id="waitlist" class="waitlist-embed"><iframe data-waitlist-form title="Join the Innovative Projects Hub course waitlist" loading="lazy">Loading Google Form…</iframe></div>
       </div></section>
       <section class="final-cta"><div class="container cta-wrapper"><span class="section-label">Want personal help?</span><h2>Start with a free call.</h2><div class="cta-buttons"><a href="#book" class="btn btn-primary"><span>Book your free 15-minute call</span></a></div></div></section>
-    </div>
-
-    <div class="page-view" id="about-view" hidden>
-      <section class="meet-strategist">
-        <div class="container">
-          <div class="meet-grid">
-            <div class="meet-photo-col">
-              <div class="meet-badge">Founder &amp; Business Growth Strategist</div>
-              <div class="meet-photo-wrapper">
-                <img src="owner-photo.png" alt="Gina, founder of Innovative Projects Hub" class="meet-photo" width="1024" height="1536">
-              </div>
-            </div>
-            <div class="meet-content">
-              <span class="section-label">Your guide to practical AI</span>
-              <h1>Hi, I'm <span class="gradient-text italic">Gina</span></h1>
-              <p class="meet-intro">Hi, I'm Gina, founder of Innovative Projects Hub in Chicago.</p>
-              <p class="meet-intro">I've spent nearly 20 years in sales leadership, working side by side with business owners and coaching teams to work smarter and grow. My experience includes retail stores and small businesses, leading and developing team members across different roles. I've seen how much time owners lose to tasks that pull them away from what they do best.</p>
-              <p class="meet-intro">I'm also a mom, so I know the juggle: work, school emails, practice schedules, dinner, and everything in between. When I started using Claude, an AI assistant, it changed how I manage all of it. Now I teach others to do the same.</p>
-              <p class="meet-intro">At IPH, I help small business owners and busy moms use Claude in their everyday work and life. We start with a free 15-minute call. From there, I'll help you set it up, learn the basics in plain language, and build custom AI agents when you're ready. No tech background needed.</p>
-              <div class="meet-strengths">
-                <article class="meet-strength"><div><h3>Sales leadership and team development</h3><p>Nearly two decades of coaching teams, supporting business owners, and helping people grow across different roles.</p></div></article>
-                <article class="meet-strength"><div><h3>Retail and small business</h3><p>Hands-on experience in retail stores and small businesses, with a practical view of the work that fills an owner's day.</p></div></article>
-                <article class="meet-strength"><div><h3>AI that feels approachable</h3><p>At Innovative Projects Hub, I help small business owners and busy moms get comfortable with Claude and use it in everyday life and work.</p></div></article>
-              </div>
-              <a href="#book" class="btn btn-primary"><span>Book your free 15-minute call</span></a>
-            </div>
-          </div>
-        </div>
-      </section>
     </div>
 
     <div class="page-view" id="faq-view" hidden>
@@ -2366,7 +2365,6 @@
       home: ['Get hours back every week with Claude | Innovative Projects Hub', 'Claude training for small business Chicago. Friendly AI help for small business owners and busy moms, starting with a free 15-minute call.'],
       services: ['Claude Training and Services | Innovative Projects Hub Chicago', 'Explore Claude training for small business owners in Chicago, including one-on-one sessions, a three-session package, and custom agent guidance.'],
       courses: ['Claude Courses for Small Business and Moms | IPH', 'Learn Claude with short, practical online courses for small business owners and moms. Join the waitlist for upcoming courses.'],
-      about: ['About Gina | Claude Training and Business Experience in Chicago', 'Meet Gina, founder of Innovative Projects Hub. She brings nearly 20 years in sales leadership, retail, small business, and team development to practical Claude training.'],
       faq: ['Claude Training FAQ | Innovative Projects Hub', 'Answers about Claude, privacy settings, training sessions, and getting started with AI for small business owners.'],
       book: ['Book a Free Claude Fit Call | Innovative Projects Hub', 'Book a free 15-minute call to discuss Claude training and AI help for small business owners in Chicago.']
     };
@@ -2378,7 +2376,7 @@
 
     function updatePage() {
       const requestedRoute = window.location.hash.slice(1).split('?')[0];
-      const route = requestedRoute === 'waitlist' ? 'courses' : routeNames.includes(requestedRoute) ? requestedRoute : 'home';
+      const route = requestedRoute === 'waitlist' ? 'courses' : requestedRoute === 'about' ? 'home' : routeNames.includes(requestedRoute) ? requestedRoute : 'home';
       document.querySelectorAll('.page-view').forEach((view) => {
         view.hidden = view.id !== `${route}-view`;
       });
@@ -2399,6 +2397,13 @@
       document.querySelector('[data-waitlist-form]').src = SITE_CONFIG.WAITLIST_FORM_URL;
       if (requestedRoute === 'waitlist') {
         document.getElementById('waitlist').scrollIntoView({ behavior: 'smooth' });
+      } else if (requestedRoute === 'about') {
+        const aboutSection = document.getElementById('about');
+        const root = document.documentElement;
+        const previousScrollBehavior = root.style.scrollBehavior;
+        root.style.scrollBehavior = 'auto';
+        window.scrollTo(0, window.scrollY + aboutSection.getBoundingClientRect().top - 90);
+        root.style.scrollBehavior = previousScrollBehavior;
       } else {
         window.scrollTo(0, 0);
       }

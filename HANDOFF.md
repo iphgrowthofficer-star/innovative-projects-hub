@@ -6,14 +6,14 @@ Last updated: 2026-11-18
 
 - The updated site is live at https://iphgrowthofficer-star.github.io/innovative-projects-hub/.
 - GitHub Pages deploys the root `index.html` from the `main` branch.
-- Published commit: `640d917` (`Update IPH site for Claude coaching`).
-- The repository was clean on `main` after publishing. The `claude-coaching-update` branch points to the same published commit.
+- Published site was last updated at commit `20fec32` (`Fit homepage header in short viewports`); newer homepage About changes may still be local until committed and pushed.
+- Current branch at last check was `main` with the new homepage About edits not yet published.
 - No build tools or framework are used. The whole website is a static HTML file with embedded CSS and JavaScript.
 
 ## Website Files
 
 - `index.html`: all site content, styling, route metadata, price/link configuration, and scripts.
-- `owner-photo.png`: Gina's portrait used on the About page.
+- `owner-photo.png`: Gina's portrait used in the Home founder section.
 - `office-photo.jpg`: available image, not currently used.
 - `IPH Website/CLAUDE.md`: project/design documentation and content conventions.
 - `HANDOFF.md`: this resume note.
@@ -25,7 +25,7 @@ The site uses hash routes within `index.html`, not separate HTML pages:
 - Home: `#home`
 - Services: `#services`
 - Courses: `#courses`
-- About: `#about`
+- About: `#about` anchor to Gina's founder section on Home
 - FAQ: `#faq`
 - Book: `#book`
 - Waitlist anchor on Courses: `#waitlist`
@@ -35,10 +35,10 @@ Navigation switches the visible view and updates the document title and descript
 ## Business Content
 
 - IPH now teaches small business owners and busy moms to use Claude in everyday work and life, and helps business owners build custom Claude agents.
-- The Home page uses the headline “Get hours back every week with Claude,” includes the offers, three steps, and three testimonial placeholders.
+- The Home page uses the headline “Get hours back every week with Claude,” includes offer cards, three steps, Gina's photo and full founder story, three testimonial placeholders, and booking CTAs.
 - Services list the Free Claude Fit Call, Claude Starter Session ($150), Starter Session 3-Pack ($399), and Agent Build Consultation ($200/hour, two-hour minimum).
 - Courses cover Claude for Small Business and Claude for Moms. Course pricing is shown as “$47 to $97, launching soon.”
-- The About page includes Gina's photo and the bio about nearly 20 years in sales leadership, coaching and developing teams, retail and small-business experience, being a mom, and using Claude in daily life.
+- The Home founder section includes Gina's photo and bio about nearly 20 years in sales leadership, coaching and developing teams, retail and small-business experience, being a mom, and using Claude in daily life.
 - FAQ says sessions are available online or in person.
 - Do not add past-client names or imply unsupported testimonials or results. Keep copy friendly and non-technical.
 
@@ -76,7 +76,7 @@ cd "/Users/growthofficer/Learning/IPH Start up/innovative-projects-hub"
 git status --short --branch
 ```
 
-Edit `index.html` for website changes and `IPH Website/CLAUDE.md` for project documentation. After validating locally:
+Edit `index.html` for website changes and update both `IPH Website/CLAUDE.md` and `HANDOFF.md` when page structure or project status changes. After validating locally:
 
 ```sh
 git diff --check
